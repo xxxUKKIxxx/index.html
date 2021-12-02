@@ -1,0 +1,77 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+
+body{
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+      Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic",
+      sans-serif;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color:white;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5b78f4;
+  padding: 3px 24px;
+}
+
+.navbar__logo{
+  color: white;
+  align-items: center;
+}
+
+.navbar__menu{
+  font-size:16px;
+  color:white;
+  display: flex;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.navbar__menu :hover{
+  color:#181427;
+}
+
+.navbar__menu li{
+  padding: 8px 12px;
+}
+
+.navbar__menu li:hover{
+  background-color:#a5b0e8;
+  border-radius: 4px;
+}
+
+.navbar__icons{
+  list-style: none;
+  display: flex;
+  filter: invert();
+}
+
+.navbar__icons li{
+  padding: 3px 4px
+}
+
+@media screen and (max-width:740px) {
+
+  .navbar__logo{
+    padding: 6px 24px;
+
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu{
+    flex-direction: column;
+    align-items: centet;
+
+  }
+}
