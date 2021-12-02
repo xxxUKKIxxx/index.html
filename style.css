@@ -8,10 +8,6 @@ body{
   margin: 0;
 }
 
-a{
-  text-decoration: none;
-  color:white;
-}
 
 .navbar{
   display: flex;
@@ -21,17 +17,14 @@ a{
   padding: 3px 24px;
 }
 
-.navbar__logo{
-  color: white;
-  align-items: center;
-}
+
 
 .navbar__menu{
   font-size:16px;
   color:white;
   display: flex;
   list-style: none;
-  padding-left: 20px;
+  padding-left: 0px;
 }
 
 .navbar__menu :hover{
@@ -51,27 +44,63 @@ a{
   list-style: none;
   display: flex;
   filter: invert();
+  padding: 0px;
 }
 
 .navbar__icons li{
   padding: 3px 4px
 }
 
-@media screen and (max-width:740px) {
+.navbar__toggleBtn{
+  position: absolute;
+}
 
-  .navbar__logo{
-    padding: 6px 24px;
+.navbar__toggleBtn{
+  position: absolute;
+  right: 32px;
+  filter: invert();
+  display: none;
+}
 
-  }
+@media screen and (max-width:768px) {
 
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-  }
+    padding: 17px 25px;
+    }
 
   .navbar__menu{
+    display: none;
     flex-direction: column;
-    align-items: centet;
-
+    align-items: center;
+    width: 100%;
   }
+
+  .navbar__menu li{
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar__icons{
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+.navbar__toggleBtn{
+  padding-top: 8px;
+  display: block;
+}
+
+.navbar__menu.active{
+  display: block;
+}
+.navbar__icons.active{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+}
+
 }
